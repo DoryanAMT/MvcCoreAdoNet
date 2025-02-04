@@ -18,10 +18,11 @@
                 <td>@hospital.Direccion</td>
                 <td>@hospital.Telefono</td>
                 <td>
-                    @Html.ActionLink("Details", "Details",
-                    "Hospitales",
-                             new { idhospital = hospital.IdHospital }
-                    )
+                    <a asp-controller="Hospitales"
+                    asp-action="Details"
+                    asp-route-idhospital="@hospital.IdHospital">
+                    Details
+                    </a>
                     @Html.ActionLink("Update", "Update",
                     "Hospitales",
                         new {idhospital = hospital.IdHospital}
